@@ -1,0 +1,41 @@
+---
+// This will be replaced with actual data from your CMS
+const posts = [
+  {
+    title: "10 Must-Have Android Apps in 2024",
+    excerpt: "Essential applications that will transform your Android experience",
+    date: "2024-03-15",
+    category: "Tutorials",
+    href: "/blog/must-have-android-apps"
+  },
+  {
+    title: "The Future of Foldable Phones",
+    excerpt: "Exploring the next generation of smartphone innovation",
+    date: "2024-03-14",
+    category: "Analysis",
+    href: "/blog/future-of-foldable-phones"
+  },
+  {
+    title: "How to Root Your Android Phone",
+    excerpt: "A comprehensive guide to unlocking your device's full potential",
+    date: "2024-03-13",
+    category: "Tutorials",
+    href: "/blog/root-android-phone"
+  }
+];
+---
+
+<div class="space-y-8">
+  {posts.map(post => (
+    <article class="border-b border-gray-800 pb-8">
+      <div class="flex items-center gap-4 mb-2">
+        <span class="text-accent text-sm font-semibold">{post.category}</span>
+        <span class="text-gray-500 text-sm">{post.date}</span>
+      </div>
+      <h3 class="text-xl font-bold mb-2">
+        <a href={post.href} class="hover:text-accent">{post.title}</a>
+      </h3>
+      <p class="text-gray-400">{post.excerpt}</p>
+    </article>
+  ))}
+</div>

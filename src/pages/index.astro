@@ -1,0 +1,54 @@
+---
+import Layout from '../layouts/Layout.astro';
+import FeaturedPost from '../components/FeaturedPost.astro';
+import LatestPosts from '../components/LatestPosts.astro';
+
+const title = "Welcome to Lazy Tech Talk - Your Ultimate Tech Review Destination";
+---
+
+<Layout title={title}>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <section class="text-center mb-16">
+      <h1 class="text-4xl md:text-6xl font-bold mb-6">
+        Your Ultimate
+        <span class="text-accent">Tech Review</span>
+        Destination
+      </h1>
+      <p class="text-xl text-gray-400 max-w-2xl mx-auto">
+        Discover in-depth reviews, tutorials, and insights about the latest technology, smartphones, and gadgets.
+      </p>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-2xl font-bold mb-8">Featured Reviews</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <FeaturedPost
+          title="iPhone 15 Pro Max Review"
+          excerpt="A comprehensive look at Apple's latest flagship device"
+          image="/placeholder.jpg"
+          href="/reviews/iphone-15-pro-max"
+          category="Reviews"
+        />
+        <FeaturedPost
+          title="Best Android Phones 2024"
+          excerpt="Top Android smartphones for every budget"
+          image="/placeholder.jpg"
+          href="/reviews/best-android-phones-2024"
+          category="Reviews"
+        />
+        <FeaturedPost
+          title="MacBook Pro M3 Review"
+          excerpt="Is Apple's newest MacBook worth the upgrade?"
+          image="/placeholder.jpg"
+          href="/reviews/macbook-pro-m3"
+          category="Reviews"
+        />
+      </div>
+    </section>
+
+    <section>
+      <h2 class="text-2xl font-bold mb-8">Latest Posts</h2>
+      <LatestPosts />
+    </section>
+  </div>
+</Layout>
