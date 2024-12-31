@@ -11,6 +11,9 @@ export default defineConfig({
     mdx(),
     sitemap(),
   ],
-  output: 'static',
+  output: 'static',  // Ensure static output is used
+  buildOptions: {
+    out: './dist',  // Explicitly specify 'dist' as the output directory
+  },
   adapter: vercel(),
 });
